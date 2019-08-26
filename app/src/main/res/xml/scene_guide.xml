@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition motion:constraintSetStart="@+id/start"
+                motion:constraintSetEnd="@+id/end"
+                motion:duration="2000">
+
+        <OnClick motion:targetId="@id/guide_motion"
+                 motion:clickAction="toggle"/>
+
+        <KeyFrameSet>
+            <KeyPosition
+                    motion:keyPositionType="parentRelative"
+                    motion:motionTarget="@id/guide_iv1"
+                    motion:framePosition="33"
+                    motion:percentX="0"
+                    motion:percentY="0.33"/>
+            <KeyPosition
+                    motion:keyPositionType="parentRelative"
+                    motion:motionTarget="@id/guide_iv1"
+                    motion:framePosition="66"
+                    motion:percentX="1"
+                    motion:percentY="0.22"/>
+
+            <KeyPosition
+                    motion:keyPositionType="parentRelative"
+                    motion:motionTarget="@id/guide_iv2"
+                    motion:framePosition="33"
+                    motion:percentX="1"
+                    motion:percentY="0.44"/>
+            <KeyPosition
+                    motion:keyPositionType="parentRelative"
+                    motion:motionTarget="@id/guide_iv2"
+                    motion:framePosition="66"
+                    motion:percentX="0"
+                    motion:percentY="0.33"/>
+
+            <KeyPosition
+                    motion:keyPositionType="parentRelative"
+                    motion:motionTarget="@id/guide_iv3"
+                    motion:framePosition="33"
+                    motion:percentX="0"
+                    motion:percentY="0.55"/>
+            <KeyPosition
+                    motion:keyPositionType="parentRelative"
+                    motion:motionTarget="@id/guide_iv3"
+                    motion:framePosition="66"
+                    motion:percentX="1"
+                    motion:percentY="0.44"/>
+            <KeyPosition
+                    motion:keyPositionType="parentRelative"
+                    motion:motionTarget="@id/guide_iv4"
+                    motion:framePosition="33"
+                    motion:percentX="1"
+                    motion:percentY="0.66"/>
+            <KeyPosition
+                    motion:keyPositionType="parentRelative"
+                    motion:motionTarget="@id/guide_iv4"
+                    motion:framePosition="66"
+                    motion:percentX="0"
+                    motion:percentY="0.55"/>
+
+
+            <!--统一设置 动画-->
+            <KeyAttribute android:alpha="0.5"
+                          motion:motionTarget="@id/guide_iv1"
+                          motion:framePosition="50"
+                          android:scaleX="1.5"
+                          android:scaleY="1.5"
+                          android:rotation="360"/>
+            <KeyAttribute android:alpha="0.5"
+                          motion:motionTarget="@id/guide_iv2"
+                          motion:framePosition="50"
+                          android:scaleX="1.5"
+                          android:scaleY="1.5"
+                          android:rotation="360"/>
+            <KeyAttribute android:alpha="0.5"
+                          motion:motionTarget="@id/guide_iv3"
+                          motion:framePosition="50"
+                          android:scaleX="1.5"
+                          android:scaleY="1.5"
+                          android:rotation="360"/>
+            <KeyAttribute android:alpha="0.5"
+                          motion:motionTarget="@id/guide_iv4"
+                          motion:framePosition="50"
+                          android:scaleX="1.5"
+                          android:scaleY="1.5"
+                          android:rotation="360"/>
+        </KeyFrameSet>
+    </Transition>
+
+
+    <ConstraintSet android:id="@+id/start">
+
+        <Constraint android:id="@+id/guide_iv1"
+                    android:layout_width="@dimen/dp60"
+                    android:layout_height="@dimen/dp60"
+
+                    motion:layout_constraintRight_toRightOf="parent"
+                    motion:layout_constraintLeft_toLeftOf="parent"
+                    motion:layout_constraintBottom_toBottomOf="parent"
+                    motion:layout_constraintTop_toTopOf="parent">
+
+            <CustomAttribute motion:attributeName="textSize"
+                             motion:customDimension="12sp"/>
+            <CustomAttribute motion:attributeName="text"
+                             motion:customStringValue="举"/>
+        </Constraint>
+
+        <Constraint android:id="@+id/guide_iv2"
+                    android:layout_width="@dimen/dp60"
+                    android:layout_height="@dimen/dp60"
+
+                    motion:layout_constraintRight_toRightOf="parent"
+                    motion:layout_constraintLeft_toLeftOf="parent"
+                    motion:layout_constraintBottom_toBottomOf="parent"
+                    motion:layout_constraintTop_toTopOf="parent">
+
+            <CustomAttribute motion:attributeName="textSize"
+                             motion:customDimension="12sp"/>
+            <CustomAttribute motion:attributeName="text"
+                             motion:customStringValue="重"/>
+
+        </Constraint>
+
+        <Constraint android:id="@+id/guide_iv3"
+                    android:layout_width="@dimen/dp60"
+                    android:layout_height="@dimen/dp60"
+
+                    motion:layout_constraintRight_toRightOf="parent"
+                    motion:layout_constraintLeft_toLeftOf="parent"
+                    motion:layout_constraintBottom_toBottomOf="parent"
+                    motion:layout_constraintTop_toTopOf="parent">
+
+            <CustomAttribute motion:attributeName="textSize"
+                             motion:customDimension="12sp"/>
+            <CustomAttribute motion:attributeName="text"
+                             motion:customStringValue="若"/>
+        </Constraint>
+
+        <Constraint android:id="@+id/guide_iv4"
+                    android:layout_width="@dimen/dp60"
+                    android:layout_height="@dimen/dp60"
+
+                    motion:layout_constraintRight_toRightOf="parent"
+                    motion:layout_constraintLeft_toLeftOf="parent"
+                    motion:layout_constraintTop_toTopOf="parent"
+                    motion:layout_constraintBottom_toBottomOf="parent">
+
+            <CustomAttribute motion:attributeName="textSize"
+                             motion:customDimension="12sp"/>
+            <CustomAttribute motion:attributeName="text"
+                             motion:customStringValue="轻"/>
+        </Constraint>
+
+    </ConstraintSet>
+
+
+    <ConstraintSet android:id="@+id/end">
+
+        <Constraint android:id="@+id/guide_iv1"
+                    motion:layout_constraintHorizontal_chainStyle="packed"
+                    android:layout_width="@dimen/dp60"
+                    android:layout_height="@dimen/dp60"
+
+                    motion:layout_constraintRight_toRightOf="parent"
+                    motion:layout_constraintLeft_toLeftOf="parent"
+                    motion:layout_constraintTop_toTopOf="parent"
+
+                    motion:layout_constraintBottom_toTopOf="@id/guide_iv2">
+
+            <CustomAttribute motion:attributeName="textSize"
+                             motion:customDimension="10sp"/>
+            <CustomAttribute motion:attributeName="text"
+                             motion:customStringValue="大"/>
+        </Constraint>
+
+        <Constraint android:id="@+id/guide_iv2"
+                    motion:layout_constraintHorizontal_chainStyle="packed"
+                    android:layout_width="@dimen/dp60"
+                    android:layout_height="@dimen/dp60"
+
+                    motion:layout_constraintTop_toBottomOf="@id/guide_iv1"
+                    motion:layout_constraintBottom_toTopOf="@id/guide_iv3"
+
+        >
+
+            <CustomAttribute motion:attributeName="textSize"
+                             motion:customDimension="10sp"/>
+            <CustomAttribute motion:attributeName="text"
+                             motion:customStringValue="象"/>
+
+        </Constraint>
+
+        <Constraint android:id="@+id/guide_iv3"
+                    motion:layout_constraintHorizontal_chainStyle="packed"
+                    android:layout_width="@dimen/dp60"
+                    android:layout_height="@dimen/dp60"
+
+                    motion:layout_constraintTop_toBottomOf="@id/guide_iv2"
+                    motion:layout_constraintBottom_toTopOf="@id/guide_iv4">
+
+            <CustomAttribute motion:attributeName="textSize"
+                             motion:customDimension="10sp"/>
+            <CustomAttribute motion:attributeName="text"
+                             motion:customStringValue="无"/>
+        </Constraint>
+
+        <Constraint android:id="@+id/guide_iv4"
+                    motion:layout_constraintHorizontal_chainStyle="packed"
+                    android:layout_width="@dimen/dp60"
+                    android:layout_height="@dimen/dp60"
+
+                    motion:layout_constraintRight_toRightOf="parent"
+                    motion:layout_constraintLeft_toLeftOf="parent"
+
+                    motion:layout_constraintTop_toBottomOf="@id/guide_iv3"
+                    motion:layout_constraintBottom_toBottomOf="parent">
+            <CustomAttribute motion:attributeName="textSize"
+                             motion:customDimension="10sp"/>
+            <CustomAttribute motion:attributeName="text"
+                             motion:customStringValue="形"/>
+        </Constraint>
+
+    </ConstraintSet>
+
+</MotionScene>

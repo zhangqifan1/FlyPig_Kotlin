@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FlyPig_Kotlin</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hide_sheet_behavior">com.as.flypig_kotlin.behavior.BottomSheetBehavior_Hide</string>
+</resources>

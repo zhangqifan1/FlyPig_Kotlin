@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.as.flypig_kotlin.customui.MyMotionBar
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutDescription="@xml/scene_mymotionbar"
+        android:minHeight="@dimen/dp90"
+        android:fitsSystemWindows="false"
+        app:layout_scrollFlags="scroll|enterAlways|snap|exitUntilCollapsed"
+        >
+
+
+    <ImageView
+            android:id="@+id/background"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/colorAccent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg1"/>
+
+    <ImageView
+            android:id="@+id/label"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/dao"
+            android:textColor="#FFF"
+            />
+
+    <TextView
+            android:id="@+id/title"
+            android:textSize="26sp"
+            android:textColor="#FFF"
+            android:text="大西瓜你"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+    <ImageView
+            android:id="@+id/pingguo"
+            android:src="@drawable/pingguo"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            tools:ignore="ContentDescription"/>
+
+    <ImageView
+            android:id="@+id/li"
+            android:src="@drawable/li"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            tools:ignore="ContentDescription"/>
+
+
+</com.as.flypig_kotlin.customui.MyMotionBar>

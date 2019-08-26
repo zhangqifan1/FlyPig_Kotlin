@@ -1,0 +1,58 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.as.flypig_kotlin"
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+//    dataBinding {
+//        enabled = true
+//    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:2.0.0-beta2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    implementation 'com.android.support:multidex:1.0.3'
+
+    //辅助 Kotlin 的一个官方库
+    implementation "org.jetbrains.anko:anko:0.10.8"
+
+    // 底部导航
+    implementation 'com.github.ittianyu:BottomNavigationViewEx:2.0.4'
+
+    implementation 'com.android.support:design:28.0.0'
+
+    //状态栏
+    compile 'com.jaeger.statusbarutil:library:1.5.1'
+
+    //监听滑动的ScrollView  谷歌出品
+    compile 'com.github.ksoichiro:android-observablescrollview:1.6.0'
+
+    // 万能适配器
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.50'
+
+    implementation project(path: ':base')
+    implementation project(path: ':shapelibrary')
+}

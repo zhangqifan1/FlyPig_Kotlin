@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.motion.MotionLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".ui.GuideActivity"
+        android:id="@+id/guide_motion"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutDescription="@xml/scene_guide">
+
+
+        <com.as.flypig_kotlin.customui.OvaLTextView
+                android:padding="@dimen/dp4"
+                android:gravity="center"
+
+                android:text="举"
+                android:id="@+id/guide_iv1"
+                android:textSize="26sp"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="MissingConstraints"/>
+
+        <com.as.flypig_kotlin.customui.OvaLTextView
+                android:padding="@dimen/dp4"
+                android:gravity="center"
+
+                android:text="重"
+                android:id="@+id/guide_iv2"
+                android:textSize="26sp"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="MissingConstraints"/>
+
+        <com.as.flypig_kotlin.customui.OvaLTextView
+                android:padding="@dimen/dp4"
+                android:gravity="center"
+
+                android:text="若"
+                android:id="@+id/guide_iv3"
+                android:textSize="26sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="MissingConstraints"/>
+
+        <com.as.flypig_kotlin.customui.OvaLTextView
+                android:padding="@dimen/dp4"
+                android:gravity="center"
+
+                android:text="轻"
+                android:id="@+id/guide_iv4"
+                android:textSize="26sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="MissingConstraints"/>
+
+
+</android.support.constraint.motion.MotionLayout>
