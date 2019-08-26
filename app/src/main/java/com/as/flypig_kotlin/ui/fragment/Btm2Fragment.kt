@@ -34,6 +34,7 @@ class Btm2Fragment : BaseFragment() {
     }
 
     override fun initData() {
+
     }
 
     override fun initListener() {
